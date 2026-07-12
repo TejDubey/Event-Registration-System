@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration Form</title>
+    <link rel="icon" href="./favicon.svg">
+    <link href="./regform.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="info-panel">
+        <h1>VIT Chennai Campus Events</h1>
+        <p>
+            VIT Chennai is hosting a series of technical, cultural, and professional
+            development events for students across all disciplines. These events
+            include hands-on workshops, expert talks, innovation challenges, and
+            cultural showcases designed to enhance both academic and extracurricular
+            growth.
+            <br><br>
+            <strong>Venue:</strong> VIT Chennai Campus<br>
+            <strong>Participants:</strong> VIT Students Only<br>
+            <strong>Organized by:</strong> Student Clubs & Faculty Coordinators<br>
+            <strong>Date & Time:</strong> 08-01-2026 12:30pm</p>
+    </div>
+    <div class="form-container">
+        <h2>Event Registration</h2>
+        <form id="RegistrationForm">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required id="name">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required id="email">
+            <label>Create Password</label>
+            <input type="password" placeholder="Create a password" minlength="8" required id="password">
+            <label>Gender</label>
+            <div class="inline">
+                <label><input type="radio" name="gender" value="Male">Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+            <label>Select Event Type</label>
+            <select id="event"><option value="">Select an event</option>
+                <option value="Technical Workshop">Technical Workshop</option>
+                <option value="Cultural Fest">Cultural Fest</option>
+                <option value="Sports Meet">Sports Meet</option>
+                <option value="Seminar">Seminar</option> </select>
+            <label>Interests</label>
+            <div class="inline">
+                <label><input type="checkbox" name="interests" value="coding"> Coding</label>
+                <label><input type="checkbox" name="interests" value="music"> Music</label>
+                <label><input type="checkbox" name="interests" value="sports"> Sports</label>
+                <label><input type="checkbox" name="interests" value="photography"> Photography</label>
+            </div> <br>
+            <label>How excited are you for this event?</label>
+            <div class="slider-wrapper">
+                <div class="slider-labels">
+                    <span>0%</span>
+                    <span>100%</span>
+                </div>
+                <input type="range" min="0" max="100" id="excitement">
+            </div>
+            <br><label>Why do you want to join?</label>
+            <textarea rows="3" placeholder="Write a short message" id="message"></textarea>
+            <div id="statusMessage"></div>
+            <div class="submit-box">
+                <input type="submit" value="Register">
+            </div>
+            <p class="bottom-text">
+                Already have an account?
+                <a href="login.html">Login Here</a>
+            </p>
+        </form>
+    </div>
+</div>
+<footer class="footer">
+    <p>© 2026 Event Registration Form • Designed & Developed by <strong>Tej Dubey</strong></p>
+</footer>
+</body>
+<script src="./script.js"></script>
+</html>

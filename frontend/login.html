@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Login</title>
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <div class="overlay">
+          <span class="badge"> Secure Student Portal </span>
+          <h1>Welcome Back</h1>
+          <p>
+            Continue your journey with
+            <strong>VIT Chennai Campus Events.</strong>
+          </p>
+          <div class="features">
+            <div class="feature">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>My Registrations</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-trophy"></i>
+              <span>Certificates</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-user-group"></i>
+              <span>Student Community</span>
+            </div>
+            <div class="feature">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>Upcoming Workshops</span>
+            </div>
+          </div>
+          <h3>Learn • Connect • Innovate</h3>
+        </div>
+      </div>
+      <div class="right-panel">
+        <div class="login-card">
+          <h2>Student Login</h2>
+          <p class="subtitle">Login to access your dashboard</p>
+          <form id="loginForm">
+            <label>Email Address</label>
+            <div class="input-box">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" placeholder="Enter your email" required/>
+            </div>
+            <label>Password</label>
+            <div class="input-box">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" placeholder="Enter your password" required/>
+              <i class="fa-regular fa-eye eye" id="togglePassword"></i>
+            </div>
+            <div class="options">
+              <label>
+                <input type="checkbox" />
+                Remember Me
+              </label>
+              <a href="#"> Forgot Password? </a>
+            </div>
+            <button type="submit">Login</button>
+            <div id="loginStatus"></div>
+            <p class="bottom-text">
+              Don't have an account?
+              <a href="regform.html"> Register Here </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="login.js"></script>
+</html>
