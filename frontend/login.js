@@ -39,6 +39,8 @@ form.addEventListener("submit", function(event){
         }
         status.innerText = result.message;
         status.style.color = "green";
+        localStorage.setItem("token", result.token);
+        window.location.href = "dashboard.html";
         console.log(result);
     })
     .catch((error) => {

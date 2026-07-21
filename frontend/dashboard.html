@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <link rel="icon" href="favicon.svg">
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+
+        <div class="overlay">
+
+            <h1>VIT Chennai Events</h1>
+
+            <p>
+
+                Welcome to your student dashboard.
+
+                Here you can manage registrations,
+
+                update your profile and explore
+
+                upcoming campus events.
+
+            </p>
+
+            <div class="stats">
+
+                <div class="box">
+                    <h2>12</h2>
+                    <span>Events</span>
+                </div>
+
+                <div class="box">
+                    <h2>4</h2>
+                    <span>Registered</span>
+                </div>
+
+                <div class="box">
+                    <h2>2026</h2>
+                    <span>Season</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="card">
+
+            <h2>
+                Welcome Back 👋
+            </h2>
+
+            <p class="subtitle">
+
+                Authentication Successful
+
+            </p>
+
+            <div class="info">
+
+                <div class="item">
+                    <i class="fa-solid fa-user"></i>
+                    <span id="name">Loading...</span>
+                </div>
+
+                <div class="item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span id="email">Loading...</span>
+                </div>
+
+                <div class="item">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span id="userid">Loading...</span>
+                </div>
+
+                <div class="item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span style="color:green;">
+                        Authenticated
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="primary">
+                    Edit Profile
+                </button>
+
+                <button class="secondary">
+                    My Registrations
+                </button>
+
+            </div>
+
+            <button id="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

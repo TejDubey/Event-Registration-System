@@ -5,11 +5,14 @@ const cors=require("cors")
 const app=express()
 const registerRoute = require("./routes/register");
 const loginRoute = require("./routes/seclogin");
+const dashboardRoute=require("./routes/dashboard")
 
 app.use(cors())
 app.use(express.json())
 app.use("/register",registerRoute)
 app.use("/login", loginRoute);
+app.use("/dashboard", dashboardRoute);
+
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log("Connected");
