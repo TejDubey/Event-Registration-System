@@ -6,12 +6,14 @@ const app=express()
 const registerRoute = require("./routes/register");
 const loginRoute = require("./routes/seclogin");
 const dashboardRoute=require("./routes/dashboard")
+const profileRoute = require("./routes/profile");
 
 app.use(cors())
 app.use(express.json())
 app.use("/register",registerRoute)
 app.use("/login", loginRoute);
 app.use("/dashboard", dashboardRoute);
+app.use("/profile", profileRoute);
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
