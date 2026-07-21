@@ -254,3 +254,32 @@ body{
 
     background:#a93226;
 }
+
+#deleteBtn{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    background:#8b0000;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+#deleteBtn:hover{
+
+    background:#a40000;
+
+}

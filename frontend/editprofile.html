@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+
+    <link rel="icon" href="favicon.svg">
+
+    <link rel="stylesheet" href="editProfile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-panel">
+
+        <div class="overlay">
+
+            <h1>Edit Your Profile</h1>
+
+            <p>
+                Keep your registration details up to date.
+                Modify your event preferences and personal information
+                whenever required.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <div class="card">
+
+            <h2>Edit Profile</h2>
+
+            <form id="editForm">
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        readonly
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Gender</label>
+
+                    <select id="gender">
+
+                        <option value="Male">Male</option>
+
+                        <option value="Female">Female</option>
+
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Event</label>
+
+                    <select id="event">
+
+                        <option value="Hackathon">Hackathon</option>
+
+                        <option value="Coding Contest">Coding Contest</option>
+
+                        <option value="Workshop">Workshop</option>
+
+                        <option value="Seminar">Seminar</option>
+
+                        <option value="Tech Talk">Tech Talk</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Interests</label>
+
+                    <div class="checkboxes">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="AI/ML"
+                            >
+                            AI/ML
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Web Development"
+                            >
+                            Web Development
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Cyber Security"
+                            >
+                            Cyber Security
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="interests"
+                                value="Cloud Computing"
+                            >
+                            Cloud Computing
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Excitement Level</label>
+
+                    <input
+                        type="range"
+                        id="excitement"
+                        min="1"
+                        max="10"
+                    >
+
+                    <span id="levelValue">5</span>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Reason for Joining</label>
+
+                    <textarea
+                        id="reason"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+                <p id="status"></p>
+
+                <div class="buttons">
+
+                    <button
+                        type="button"
+                        id="backBtn"
+                    >
+                        Back
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="saveBtn"
+                    >
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="editProfile.js"></script>
+
+</body>
+</html>
