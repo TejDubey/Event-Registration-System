@@ -1,64 +1,94 @@
 # Event Registration System
 
-A modern full-stack **Event Registration System** built using **HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB Atlas**. The application allows users to securely register for events, create accounts, and log in using encrypted passwords. This project is being developed incrementally to simulate a real-world production application.
+A full-stack Event Registration System built using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB Atlas. The application allows users to register for events, create secure accounts, and manage their profiles, while providing administrators with a dedicated dashboard to manage registrations. The project demonstrates authentication, authorization, CRUD operations, and role-based access control in a complete web application.
 
 ---
 
-## Features Implemented
+## Features
 
-### User Authentication
+### User Features
+
 - User Registration
-- User Login
-- Password Encryption using **bcrypt**
-- Duplicate Email Validation
-- Secure Password Verification using **bcrypt.compare()**
+- Secure Login
+- Password Encryption using bcrypt
+- JWT Authentication
+- Protected Dashboard
+- View Registered Event
+- Update Profile
+- Delete Profile
+- Logout
+
+### Admin Features
+
+- Secure Admin Login
+- Role-Based Access Control
+- View All Registered Users
+- Search Users by Name, Email, or Event
+- Delete User Registrations
+- Logout
 
 ### Event Registration
+
 - Student Registration Form
 - Event Selection
 - Multiple Interests Selection
 - Excitement Level Slider
-- Additional Comments/Reason Section
+- Additional Comments Section
 
-### 💾 Database
+### Database
+
 - MongoDB Atlas Integration
-- Mongoose User Schema
-- User Data Stored in Cloud Database
+- Mongoose ODM
+- Cloud-based Data Storage
 
 ### Backend
+
 - Express.js REST API
 - Registration Route
 - Login Route
+- Admin Authentication
+- JWT Middleware
+- CRUD Operations
 - JSON Request Handling
 - CORS Configuration
 - Environment Variables using dotenv
 
 ### Frontend
-- Responsive Registration Page
-- Modern Login Page
+
+- Responsive User Interface
+- Registration Page
+- User Login
+- Admin Login
+- User Dashboard
+- Admin Dashboard
+- Search Functionality
 - Password Show/Hide Toggle
-- Form Validation
-- Success & Error Messages
-- Navigation between Registration and Login
+- Client-side Validation
+- Success and Error Messages
 
 ---
 
 # Tech Stack
 
 ## Frontend
+
 - HTML5
 - CSS3
 - JavaScript (ES6)
 
 ## Backend
+
 - Node.js
 - Express.js
 
 ## Database
+
 - MongoDB Atlas
 - Mongoose
 
-## Security
+## Authentication & Security
+
+- JSON Web Token (JWT)
 - bcrypt
 - dotenv
 
@@ -69,27 +99,24 @@ A modern full-stack **Event Registration System** built using **HTML, CSS, JavaS
 ```
 Event-Registration-System
 │
-├── frontend
-│   ├── regform.html
-│   ├── login.html
-│   ├── regform.css
-│   ├── login.css
-│   ├── script.js
-│   ├── login.js
-│   ├── favicon.svg
-│   └── vitimage.png
-│
 ├── backend
+│   ├── middleware
+│   ├── models
+│   ├── routes
 │   ├── app.js
 │   ├── package.json
-│   ├── .env
-│   ├── models
-│   │     └── User.js
-│   ├── routes
-│   │     ├── register.js
-│   │     └── seclogin.js
-│   ├── controllers
-│   └── middleware
+│   └── .env
+│
+├── frontend
+│   ├── css
+│   ├── js
+│   ├── images
+│   ├── regform.html
+│   ├── login.html
+│   ├── adminLogin.html
+│   ├── dashboard.html
+│   ├── adminDashboard.html
+│   └── ...
 │
 ├── README.md
 └── .gitignore
@@ -102,95 +129,131 @@ Event-Registration-System
 | Method | Endpoint | Description |
 |---------|----------|-------------|
 | POST | `/register` | Register a new user |
-| POST | `/login` | Login using email & password |
-| GET | `/` | Check server status |
+| POST | `/login` | User login |
+| POST | `/admin/login` | Admin login |
+| GET | `/dashboard` | Protected user dashboard |
+| GET | `/profile` | Fetch user profile |
+| PUT | `/profile` | Update user profile |
+| DELETE | `/profile` | Delete user profile |
+| GET | `/admin/users` | Retrieve all registered users |
+| DELETE | `/admin/delete/:id` | Delete a user (Admin) |
+| GET | `/` | Server status |
 
 ---
 
 # Security Features
 
-- Passwords are never stored in plain text.
-- Passwords are hashed using **bcrypt** before being saved.
+- Passwords are securely hashed using bcrypt before being stored.
+- User authentication is handled using JSON Web Tokens (JWT).
+- Protected routes require a valid authentication token.
+- Role-based authorization restricts administrative operations.
 - Duplicate email registrations are prevented.
-- Environment variables are secured using **.env**.
+- Sensitive configuration values are stored using environment variables.
 
 ---
 
-# 📷 Current Application Flow
+# Application Flow
 
 ```
-Registration Page
+User Registration
         │
         ▼
-Fill Registration Form
+Register Account
         │
         ▼
-POST /register
-        │
-        ▼
-Password Hashing
+Password Hashing (bcrypt)
         │
         ▼
 MongoDB Atlas
         │
         ▼
-Registration Successful
+User Login
         │
         ▼
-Navigate to Login
+JWT Generation
         │
         ▼
-POST /login
+Protected User Dashboard
         │
         ▼
-Email Lookup
+Profile Management
         │
-        ▼
-bcrypt.compare()
-        │
-        ▼
-Login Successful
+        ├───────────────┐
+        ▼               │
+Admin Login             │
+        │               │
+        ▼               │
+JWT Verification        │
+        │               │
+        ▼               │
+Admin Dashboard         │
+        │               │
+        ▼               │
+View • Search • Delete Users
 ```
 
 ---
 
-# Upcoming Features
+# Running the Project
 
-- JSON Web Token (JWT) Authentication
-- Remember Me Functionality
-- Forgot Password
-- Dashboard
-- Protected Routes
-- User Profile
-- Admin Dashboard
-- CRUD Operations
-- Search & Filtering
-- Statistics Dashboard
-- Deployment (GitHub Pages + Render)
+## Clone the Repository
+
+```bash
+git clone https://github.com/TejDubey/Event-Registration-System.git
+```
+
+## Backend
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+Start the server:
+
+```bash
+node app.js
+```
+
+## Frontend
+
+Open the `frontend` folder and run the project using Live Server or any static web server.
 
 ---
 
-# Learning Objectives
+# Learning Outcomes
 
-This project is being built to gain hands-on experience with:
+This project provided practical experience in:
 
 - Full Stack Web Development
-- REST API Development
-- Authentication & Authorization
+- REST API Design
+- Authentication and Authorization
+- Role-Based Access Control
 - MongoDB & Mongoose
-- Password Security
-- Backend Architecture
-- Client-Server Communication
-- Deployment
-
----
+- JWT Authentication
+- Password Security with bcrypt
+- CRUD Operations
+- Client–Server Communication
+- Deployment Workflow
 
 # Author
 
 **Tej Dubey**
 
+B.Tech CSE (AI & ML)  
+VIT Chennai
+
 GitHub: https://github.com/TejDubey
 
 ---
 
-This project is actively under development, with new features being added progressively.
+# License
+
+This project is developed for educational and learning purposes.
