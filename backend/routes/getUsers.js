@@ -1,7 +1,7 @@
 const express=require("express");
 const router=express.Router();
 
-const User=require("../models/User");
+const User=require("../models/user");
 const adminAuth=require("../middleware/adminAuth");
 
 router.get("/",adminAuth,async(req,res)=>{
