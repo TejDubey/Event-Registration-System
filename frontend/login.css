@@ -244,3 +244,78 @@ button:hover {
     width: 90%;
   }
 }
+.admin-link{
+
+    margin-top:20px;
+
+    text-align:center;
+
+}
+
+.admin-link a{
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.admin-link a:hover{
+
+    color:#1d4ed8;
+
+}
+
+.admin-link{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#6b7280;
+
+}
+
+.admin-link a{
+
+    display:inline-block;
+
+    margin-left:6px;
+
+    padding:8px 14px;
+
+    border:1px solid #dbeafe;
+
+    border-radius:30px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.admin-link a:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(37,99,235,.25);
+
+}
