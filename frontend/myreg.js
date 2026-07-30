@@ -6,7 +6,7 @@ if (!token) {
 
 }
 
-fetch("http://localhost:5000/dashboard", {
+fetch("https://event-registration-system-eg97.onrender.com/dashboard", {
 
     method: "GET",
 

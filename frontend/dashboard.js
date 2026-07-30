@@ -4,7 +4,7 @@ if (!token) {
     window.location.href = "login.html";
 }
 
-fetch("http://localhost:5000/dashboard", {
+fetch("https://event-registration-system-eg97.onrender.com/dashboard", {
 
     method: "GET",
 
@@ -60,7 +60,7 @@ document.getElementById("deleteBtn").addEventListener("click", async () => {
 
     try {
 
-        const response = await fetch("http://localhost:5000/profile", {
+        const response = await fetch("https://event-registration-system-eg97.onrender.com/profile", {
 
             method: "DELETE",
 

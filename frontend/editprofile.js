@@ -14,7 +14,7 @@ const levelValue = document.getElementById("levelValue");
 const status = document.getElementById("status");
 const form = document.getElementById("editForm");
 
-fetch("http://localhost:5000/dashboard", {
+fetch("https://event-registration-system-eg97.onrender.com/dashboard", {
 
     method: "GET",
 
@@ -89,7 +89,7 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("http://localhost:5000/profile", {
+        const response = await fetch("https://event-registration-system-eg97.onrender.com/profile", {
 
             method: "PUT",
 

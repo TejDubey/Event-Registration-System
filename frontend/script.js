@@ -23,7 +23,7 @@ form.addEventListener("submit", function(event) {
         reason
     }
     const status = document.getElementById("statusMessage");
-    fetch("http://localhost:5000/register", {
+    fetch("https://event-registration-system-eg97.onrender.com/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

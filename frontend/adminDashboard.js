@@ -2,7 +2,7 @@ const token = localStorage.getItem("adminToken");
 
 let allUsers = [];
 
-fetch("http://localhost:5000/admin/users", {
+fetch("https://event-registration-system-eg97.onrender.com", {
 
     headers: {
         Authorization: `Bearer ${token}`
@@ -100,7 +100,7 @@ async function deleteUser(id) {
 
     const res = await fetch(
 
-        "http://localhost:5000/admin/delete/" + id,
+        "https://event-registration-system-eg97.onrender.com/admin/delete/" + id,
 
         {
 

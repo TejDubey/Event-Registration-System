@@ -23,7 +23,7 @@ form.addEventListener("submit", function(event){
         email,
         password
     };
-    fetch("http://localhost:5000/login", {
+    fetch("https://event-registration-system-eg97.onrender.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
