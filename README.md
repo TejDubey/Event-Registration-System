@@ -247,9 +247,6 @@ This project provided practical experience in:
 
 **Tej Dubey**
 
-B.Tech CSE (AI & ML)  
-VIT Chennai
-
 GitHub: https://github.com/TejDubey
 
 ---
