@@ -111,7 +111,7 @@ Event-Registration-System
 │   ├── css
 │   ├── js
 │   ├── images
-│   ├── regform.html
+│   ├── index.html
 │   ├── login.html
 │   ├── adminLogin.html
 │   ├── dashboard.html
