@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
 
     const response = await fetch(
 
-        "https://event-registration-system-eg97.onrender.com/login",
+        "https://event-registration-system-eg97.onrender.com/admin/login",
 
         {
 
