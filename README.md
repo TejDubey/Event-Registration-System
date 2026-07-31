@@ -1,92 +1,90 @@
 # Event Registration System
 
-A full-stack Event Registration System built using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB Atlas. The application allows users to register for events, create secure accounts, and manage their profiles, while providing administrators with a dedicated dashboard to manage registrations. The project demonstrates authentication, authorization, CRUD operations, and role-based access control in a complete web application.
+A full-stack Event Registration System developed using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB Atlas. The application enables users to register for events, manage their accounts, and update their profiles, while providing administrators with a secure dashboard to manage registrations. It demonstrates authentication, authorization, CRUD operations, role-based access control, and cloud deployment.
+
+## Live Demo
+
+**Frontend:** https://event-registration-system-q6c6.vercel.app/
+
+**Backend:** https://event-registration-system-eg97.onrender.com/
+
+> **Note:** The backend is hosted on Render's free tier. If the application has been inactive, the first request may take a short time while the server wakes up.
 
 ---
 
-## Features
+# Features
 
-### User Features
+## User
 
-- User Registration
-- Secure Login
-- Password Encryption using bcrypt
-- JWT Authentication
-- Protected Dashboard
-- View Registered Event
-- Update Profile
-- Delete Profile
+- Register for events
+- Secure login using JWT
+- Password encryption with bcrypt
+- Protected dashboard
+- View registered event details
+- Update profile
+- Delete profile
 - Logout
 
-### Admin Features
+## Admin
 
-- Secure Admin Login
-- Role-Based Access Control
-- View All Registered Users
-- Search Users by Name, Email, or Event
-- Delete User Registrations
+- Secure admin login
+- Role-based access control
+- View all registered users
+- Search users by name, email, or event
+- Delete user registrations
 - Logout
 
-### Event Registration
+## Event Registration
 
-- Student Registration Form
-- Event Selection
-- Multiple Interests Selection
-- Excitement Level Slider
-- Additional Comments Section
+- Event registration form
+- Event selection
+- Multiple interests selection
+- Excitement level slider
+- Additional comments
 
-### Database
+## Backend
 
-- MongoDB Atlas Integration
+- RESTful API using Express.js
+- JWT authentication middleware
+- CRUD operations
+- MongoDB Atlas integration
 - Mongoose ODM
-- Cloud-based Data Storage
+- CORS support
+- Environment variable management with dotenv
 
-### Backend
+## Frontend
 
-- Express.js REST API
-- Registration Route
-- Login Route
-- Admin Authentication
-- JWT Middleware
-- CRUD Operations
-- JSON Request Handling
-- CORS Configuration
-- Environment Variables using dotenv
-
-### Frontend
-
-- Responsive User Interface
-- Registration Page
-- User Login
-- Admin Login
-- User Dashboard
-- Admin Dashboard
-- Search Functionality
-- Password Show/Hide Toggle
-- Client-side Validation
-- Success and Error Messages
+- Responsive interface
+- Registration page
+- User login
+- Admin login
+- User dashboard
+- Admin dashboard
+- Search functionality
+- Password visibility toggle
+- Client-side validation
 
 ---
 
 # Tech Stack
 
-## Frontend
+### Frontend
 
 - HTML5
 - CSS3
 - JavaScript (ES6)
 
-## Backend
+### Backend
 
 - Node.js
 - Express.js
 
-## Database
+### Database
 
 - MongoDB Atlas
 - Mongoose
 
-## Authentication & Security
+### Authentication & Security
 
 - JSON Web Token (JWT)
 - bcrypt
@@ -96,7 +94,7 @@ A full-stack Event Registration System built using HTML, CSS, JavaScript, Node.j
 
 # Project Structure
 
-```
+```text
 Event-Registration-System
 │
 ├── backend
@@ -108,15 +106,14 @@ Event-Registration-System
 │   └── .env
 │
 ├── frontend
-│   ├── css
-│   ├── js
-│   ├── images
 │   ├── index.html
 │   ├── login.html
 │   ├── adminLogin.html
 │   ├── dashboard.html
 │   ├── adminDashboard.html
-│   └── ...
+│   ├── *.css
+│   ├── *.js
+│   └── assets
 │
 ├── README.md
 └── .gitignore
@@ -131,78 +128,35 @@ Event-Registration-System
 | POST | `/register` | Register a new user |
 | POST | `/login` | User login |
 | POST | `/admin/login` | Admin login |
-| GET | `/dashboard` | Protected user dashboard |
-| GET | `/profile` | Fetch user profile |
-| PUT | `/profile` | Update user profile |
-| DELETE | `/profile` | Delete user profile |
+| GET | `/dashboard` | User dashboard |
+| GET | `/profile` | Retrieve profile |
+| PUT | `/profile` | Update profile |
+| DELETE | `/profile` | Delete profile |
 | GET | `/admin/users` | Retrieve all registered users |
-| DELETE | `/admin/delete/:id` | Delete a user (Admin) |
+| DELETE | `/admin/delete/:id` | Delete a user |
 | GET | `/` | Server status |
 
 ---
 
-# Security Features
+# Security
 
-- Passwords are securely hashed using bcrypt before being stored.
-- User authentication is handled using JSON Web Tokens (JWT).
-- Protected routes require a valid authentication token.
-- Role-based authorization restricts administrative operations.
+- Passwords are hashed using bcrypt before storage.
+- JWT-based authentication secures protected routes.
+- Role-based authorization restricts administrator-only operations.
 - Duplicate email registrations are prevented.
-- Sensitive configuration values are stored using environment variables.
+- Sensitive credentials are managed through environment variables.
 
 ---
 
-# Application Flow
+# Installation
 
-```
-User Registration
-        │
-        ▼
-Register Account
-        │
-        ▼
-Password Hashing (bcrypt)
-        │
-        ▼
-MongoDB Atlas
-        │
-        ▼
-User Login
-        │
-        ▼
-JWT Generation
-        │
-        ▼
-Protected User Dashboard
-        │
-        ▼
-Profile Management
-        │
-        ├───────────────┐
-        ▼               │
-Admin Login             │
-        │               │
-        ▼               │
-JWT Verification        │
-        │               │
-        ▼               │
-Admin Dashboard         │
-        │               │
-        ▼               │
-View • Search • Delete Users
-```
-
----
-
-# Running the Project
-
-## Clone the Repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/TejDubey/Event-Registration-System.git
 ```
 
-## Backend
+## Backend Setup
 
 ```bash
 cd backend
@@ -216,32 +170,32 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-Start the server:
+Run the backend:
 
 ```bash
 node app.js
 ```
 
-## Frontend
+## Frontend Setup
 
-Open the `frontend` folder and run the project using Live Server or any static web server.
+Open the `frontend` directory using Live Server or any static web server.
 
 ---
 
 # Learning Outcomes
 
-This project provided practical experience in:
-
-- Full Stack Web Development
-- REST API Design
-- Authentication and Authorization
-- Role-Based Access Control
-- MongoDB & Mongoose
+- Full-Stack Web Development
+- REST API Development
+- Authentication & Authorization
+- Role-Based Access Control (RBAC)
+- MongoDB Atlas Integration
 - JWT Authentication
-- Password Security with bcrypt
+- Password Security using bcrypt
 - CRUD Operations
 - Client–Server Communication
-- Deployment Workflow
+- Cloud Deployment using Render and Vercel
+
+---
 
 # Author
 
@@ -253,4 +207,4 @@ GitHub: https://github.com/TejDubey
 
 # License
 
-This project is developed for educational and learning purposes.
+This project is intended for educational and learning purposes.
